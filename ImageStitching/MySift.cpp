@@ -25,18 +25,6 @@ CImg<float> MySift::halfSizeImage(CImg<float> im) {
 	return imnew;
 }
 
-//上采样原来的图像，返回放大2倍尺寸的图像  
-CImg<float> MySift::doubleSizeImage(CImg<float> im) {
-	int w = im.width() * 2;
-	int h = im.height() * 2;
-    CImg<float>imnew(w, h, 1, 1, 0);
-    cimg_forXY(imnew, x, y){
-        imnew(x, y) = im(x / 2, y / 2);
-    }
-
-	return imnew;
-}
-
 //上采样原来的图像，返回放大2倍尺寸的线性插值图像  
 CImg<float> MySift::doubleSizeImage2(CImg<float> im) {
     int w = im.width() * 2;
@@ -106,19 +94,7 @@ float MySift::getPixelBI(CImg<float> im, float col, float row) {
 	return rfrac * row1 + (1.0 - rfrac) * row2;
 }
 
-//矩阵归一化  
-void MySift::normalizeMat(CImg<float>& mat)
-{
-	float sum = 0;
-    cimg_forXY(mat, x, y){
-        sum += mat(x, y); 
-    }
-    cimg_forXY(mat, x, y){
-        mat(x, y) /= sum; 
-    }
-}
-
-//向量归一化  
+//向量归一化
 void MySift::normalizeVec(float* vec, int dim)
 {
 	unsigned int i;
@@ -234,11 +210,6 @@ int MySift::BlurImage(CImg<float> src, CImg<float>& dst, float sigma)
 	convkernel = GaussianKernel1D(dim, sigma);
 
 	dst = useFilter(src, convkernel);
-//	Convolve1DHeight(convkernel, dim, tempMat, dst);
-	//cvReleaseMat(&tempMat);
-//	dst.display();
-//	cvSub(src, dst, dst);
-//	dst.display();
 	return dim;
 }
 
@@ -317,9 +288,6 @@ void MySift::BuildGaussianOctaves(CImg<float> image)
 	{
 		//首先建立金字塔每一阶梯的最底层，其中0阶梯的最底层已经建立好  
 		printf("Building octave %d of dimesion (%d, %d)\n", i, tempMat.width(), tempMat.height());
-		//为各个阶梯分配内存  
-//		Gaussianpyr[i].Octave = (ImageLevels*)malloc((SCALESPEROCTAVE + 3) * sizeof(ImageLevels));
-//		DOGoctaves[i].Octave = (ImageLevels*)malloc((SCALESPEROCTAVE + 2) * sizeof(ImageLevels));
 		//存储各个阶梯的最底层  
 		(Gaussianpyr[i].Octave)[0].Level = tempMat;
 
@@ -523,29 +491,18 @@ void MySift::DetectKeypoint(int numoctaves, ImageOctaves *GaussianPyr) {
 //在图像中，显示SIFT特征点的位置  
 void MySift::DisplayKeypointLocation(CImg<float>& image, ImageOctaves *GaussianPyr) {
 	for(Keypoint p : keypoints) {
-		//cvLine(image, cvPoint((int)((p.col) - 3), (int)(p.row)),
-		//	cvPoint((int)((p.col) + 3), (int)(p.row)), CV_RGB(255, 255, 0),
-		//	1, 8, 0);
-		//cvLine(image, cvPoint((int)(p.col), (int)((p.row) - 3)),
-		//	cvPoint((int)(p.col), (int)((p.row) + 3)), CV_RGB(255, 255, 0),
-		//	1, 8, 0);
-
-        image.draw_circle((int)(p.col), (int)(p.row), /*(int)((GaussianPyr[p.octave].Octave)[p.level].absolute_sigma)*/1, color);
+        image.draw_circle((int)(p.col), (int)(p.row), 2, color);
 	}
 }
 
 // Compute the gradient direction and magnitude of the gaussian pyramid images  
 void MySift::ComputeGrad_DirecandMag(int numoctaves, ImageOctaves *GaussianPyr)
 {
-	// ImageOctaves *mag_thresh ;  
-//	mag_pyr = (ImageOctaves*)malloc(numoctaves * sizeof(ImageOctaves));
-//	grad_pyr = (ImageOctaves*)malloc(numoctaves * sizeof(ImageOctaves));
+	// ImageOctaves *mag_thresh ;
 	// float sigma=( (GaussianPyr[0].Octave)[SCALESPEROCTAVE+2].absolute_sigma ) / GaussianPyr[0].subsample;  
 	// int dim = (int) (max(3.0f, 2 * GAUSSKERN *sigma + 1.0f)*0.5+0.5);  
 	for (int i = 0; i<numoctaves; i++)
 	{
-//		mag_pyr[i].Octave = (ImageLevels*)malloc((SCALESPEROCTAVE)* sizeof(ImageLevels));
-//		grad_pyr[i].Octave = (ImageLevels*)malloc((SCALESPEROCTAVE)* sizeof(ImageLevels));
 		for (int j = 1; j<SCALESPEROCTAVE + 1; j++)//取中间的scaleperoctave个层  
 		{
 			CImg<float>Mag(GaussianPyr[i].col, GaussianPyr[i].row, 1, 1, 0);
@@ -568,8 +525,6 @@ void MySift::ComputeGrad_DirecandMag(int numoctaves, ImageOctaves *GaussianPyr)
 				}
 			((mag_pyr[i].Octave)[j - 1]).Level = Mag;
 			((grad_pyr[i].Octave)[j - 1]).Level = Ori;
-			//cvReleaseMat(&tempMat1);
-			//cvReleaseMat(&tempMat2);
 		}//for levels  
 	}//for octaves  
 }
@@ -848,8 +803,6 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 	}
 	for (int i = 0; i < 4 * GridSpacing; i++) {
 		for (int j = 0; j < 8 * GridSpacing; j += 2) {
-//			printf("%d:%f,   %d:%f\n", i * 8 * GridSpacing + j, feat_samples[i * 8 * GridSpacing + j], i * 8 * GridSpacing + j + 1,
-//					feat_samples[i * 8 * GridSpacing + j + 1] );
 		}
 	}
 

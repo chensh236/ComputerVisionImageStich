@@ -1,39 +1,26 @@
-#ifdef _CH_  
-#pragma package <opencv>  
-#endif  
-
-#ifndef _EiC  
-#include <stdio.h>  
-
-#include "stdlib.h"  
-#include "string.h"   
+#program once
+#include <cstdio>
+#include <stdlib.h>
+#include <cstring>
 #include "malloc.h"   
 #include "math.h"   
 #include <assert.h>  
 #include <ctype.h>  
-#include <time.h>  
-//#include <cv.h>
-//#include <cxcore.h>
+#include <time.h>
 #include <CImg.h>
-//#include <highgui.h>
 #include <vector>  
 #include <iostream>
 using namespace std;
-#endif  
+using namespace cimg_library;
 
-#ifdef _EiC  
-#define WIN32  
-#endif  
 
 #define NUMSIZE 2  
 #define GAUSSKERN 3.5  
-#define PI 3.14159265358979323846  
-#define null 0
+#define PI 3.14159265358979323846
 
 //Sigma of base image -- See D.L.'s paper.  
 #define INITSIGMA 0.5  
-//Sigma of each octave -- See D.L.'s paper.  
-#define SIGMA sqrt(3)//1.6//  
+//Sigma of each octave -- See D.L.'s paper.
 
 //Number of scales per octave.  See D.L.'s paper.  
 #define SCALESPEROCTAVE 2  
@@ -73,37 +60,26 @@ typedef struct KeypointSt {
 
 	float scale, ori, mag;    /* 所在层的尺度sigma,主方向orientation (range [-PI,PI])，以及幅值 */
 	float *descrip;           /* 特征描述字指针：128维或32维等 */
-//	struct KeypointSt *next;  /* Pointer to next keypoint in list. */
 } Keypoint;
 
 class MySift {
+
 public:
 	MySift();
 	~MySift();
 
 	MySift(char* _filename, int _isColor);
 
-	CImg<float> halfSizeImage(CImg<float> im);     //缩小图像：下采样  
-	CImg<float> doubleSizeImage(CImg<float> im);   //扩大图像：最近临方法  
+	CImg<float> halfSizeImage(CImg<float> im);     //缩小图像：下采样
 	CImg<float> doubleSizeImage2(CImg<float> im);  //扩大图像：线性插值  
 	float getPixelBI(CImg<float> im, float col, float row);//双线性插值函数  
 	void normalizeVec(float* vec, int dim);//向量归一化    
-	CImg<float> GaussianKernel2D(float sigma);  //得到2维高斯核  
-	void normalizeMat(CImg<float>& mat);        //矩阵归一化
+	CImg<float> GaussianKernel2D(float sigma);  //得到2维高斯核
 
 
     CImg<float> useFilter(CImg<float> img_in, vector<float> filterIn);
     vector<float> GaussianKernel1D(int dim, float sigma);
-	//float* GaussianKernel1D(float sigma, int dim); //得到1维高斯核
 
-//	//在具体像素处宽度方向进行高斯卷积
-//	float ConvolveLocWidth(float* kernel, int dim, CImg<float> src, int x, int y);
-//	//在整个图像宽度方向进行1D高斯卷积
-//	void Convolve1DWidth(float* kern, int dim, CImg<float> src, CImg<float>& dst);
-//	//在具体像素处高度方向进行高斯卷积
-//	float ConvolveLocHeight(float* kernel, int dim, CImg<float> src, int x, int y);
-//	//在整个图像高度方向进行1D高斯卷积
-//	void Convolve1DHeight(float* kern, int dim, CImg<float> src, CImg<float>& dst);
 	//用高斯函数模糊图像    
 	int BlurImage(CImg<float> src, CImg<float>& dst, float sigma);
 
@@ -164,14 +140,13 @@ private:
 	ImageOctaves mag_pyr[4];
 	ImageOctaves grad_pyr[4];
 
-	int keypoint_count = 0;
-
 	//定义特征点具体变量  
 	vector<Keypoint> keypoints;      //用于临时存储特征点的位置等
 	vector<Keypoint> keyDescriptors; //用于最后的确定特征点以及特征描述字
 
+	// 红色
 	const unsigned char color[3] = {255, 0, 0};
-	//声明当前帧IplImage指针  
+
 	CImg<float> src;
 	CImg<float> image_kp;
 	CImg<float> image_featDir;
