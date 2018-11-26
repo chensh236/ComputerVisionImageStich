@@ -28,7 +28,7 @@ class MyMatching
 public:
 	MyMatching();
 	~MyMatching();
-	MyMatching(int _kp_count_A, Keypoint _firstKeyDesc_A, int _kp_count_B, Keypoint _firstKeyDesc_B);
+	MyMatching(vector<Keypoint> _firstKeyDesc_A, vector<Keypoint> _firstKeyDesc_B);
 
 	/* 特征匹配主函数，得到匹配点pair集 matchedPairSet */
 	void featureMatchMainProcess();
@@ -47,7 +47,7 @@ public:
 
 private:
 	int keypoint_count_A, keypoint_count_B;
-	Keypoint firstKeyDescriptor_A, firstKeyDescriptor_B;
+	vector<Keypoint> firstKeyDescriptor_A, firstKeyDescriptor_B;
 
 	vector<MatchedPair> matchedPairSet;
 	Point matchVec;

@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Chen Sihang/Desktop/cv/ex6/ImageStitching/MyBlending.cpp" "C:/Users/Chen Sihang/Desktop/cv/ex6/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj"
-  "C:/Users/Chen Sihang/Desktop/cv/ex6/ImageStitching/MyMatching.cpp" "C:/Users/Chen Sihang/Desktop/cv/ex6/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj"
-  "C:/Users/Chen Sihang/Desktop/cv/ex6/ImageStitching/MySift.cpp" "C:/Users/Chen Sihang/Desktop/cv/ex6/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj"
-  "C:/Users/Chen Sihang/Desktop/cv/ex6/ImageStitching/main.cpp" "C:/Users/Chen Sihang/Desktop/cv/ex6/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/main.cpp.obj"
-  "C:/Users/Chen Sihang/Desktop/cv/ex6/ImageStitching/stdafx.cpp" "C:/Users/Chen Sihang/Desktop/cv/ex6/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj"
+  "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyBlending.cpp" "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj"
+  "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyMatching.cpp" "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj"
+  "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.cpp" "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj"
+  "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/main.cpp" "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/main.cpp.obj"
+  "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/stdafx.cpp" "C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -6,49 +6,45 @@ MyMatching::MyMatching() {
 MyMatching::~MyMatching() {
 }
 
-MyMatching::MyMatching(int _kp_count_A, Keypoint _firstKeyDesc_A, int _kp_count_B, Keypoint _firstKeyDesc_B) {
-	keypoint_count_A = _kp_count_A;
-	keypoint_count_B = _kp_count_B;
+MyMatching::MyMatching(vector<Keypoint> _firstKeyDesc_A, vector<Keypoint> _firstKeyDesc_B) {
 	firstKeyDescriptor_A = _firstKeyDesc_A;
 	firstKeyDescriptor_B = _firstKeyDesc_B;
+	keypoint_count_A =firstKeyDescriptor_A.size();
+	keypoint_count_B = firstKeyDescriptor_B.size();
 }
 
 void MyMatching::featureMatchMainProcess() {
-	Keypoint tempDescA = firstKeyDescriptor_A;
-	while (tempDescA) {
-		float colA = tempDescA->col;
-		float rowA = tempDescA->row;
-		float* kp_desc_A = tempDescA->descrip;
-
-		Keypoint tempDescB = firstKeyDescriptor_B;
+	for(Keypoint tempDescA : firstKeyDescriptor_A){
+		float colA = tempDescA.col;
+		float rowA = tempDescA.row;
+		float* kp_desc_A = tempDescA.descrip;
 
 		float minSSD = 100.0;
 		int minIndex = -1;
 		int colB = -1;
 		int rowB = -1;
-		while (tempDescB) {    //对A图每个点，找B图各个点，计算距离
+		for(Keypoint tempDescB : firstKeyDescriptor_B){    //对A图每个点，找B图各个点，计算距离
 			float ssd = 0;
 			for (int i = 0; i < LEN; i++) {
 				float descA = *(kp_desc_A + i);
-				float descB = *(tempDescB->descrip + i);
+				float descB = *(tempDescB.descrip + i);
 				ssd += abs(descA - descB);
 			}
 			if (ssd < minSSD) {
 				minSSD = ssd;
-				colB = tempDescB->col;
-				rowB = tempDescB->row;
+				colB = tempDescB.col;
+				rowB = tempDescB.row;
 			}
-			tempDescB = tempDescB->next;
+//			tempDescB = tempDescB.next;
 		}
 
 		if (minSSD < FeatureDescGap) {    //当距离小于阈值，即当作一对匹配点
-			Point pa(tempDescA->col, tempDescA->row);
+			Point pa(tempDescA.col, tempDescA.row);
 			Point pb(colB, rowB);
 
 			MatchedPair mpair(pa, pb, minSSD);
 			matchedPairSet.push_back(mpair);
 		}
-		tempDescA = tempDescA->next;
 	}
 
 	for (int i = 0; i < matchedPairSet.size(); i++) {

@@ -28,6 +28,7 @@ using namespace std;
 #define NUMSIZE 2  
 #define GAUSSKERN 3.5  
 #define PI 3.14159265358979323846  
+#define null 0
 
 //Sigma of base image -- See D.L.'s paper.  
 #define INITSIGMA 0.5  
@@ -72,8 +73,8 @@ typedef struct KeypointSt {
 
 	float scale, ori, mag;    /* 所在层的尺度sigma,主方向orientation (range [-PI,PI])，以及幅值 */
 	float *descrip;           /* 特征描述字指针：128维或32维等 */
-	struct KeypointSt *next;  /* Pointer to next keypoint in list. */
-} *Keypoint;
+//	struct KeypointSt *next;  /* Pointer to next keypoint in list. */
+} Keypoint;
 
 class MySift {
 public:
@@ -114,7 +115,7 @@ public:
 	void BuildGaussianOctaves(CImg<float> image);  //建立高斯金字塔
 
 	//SIFT算法第三步：特征点位置检测，最后确定特征点的位置  
-	int DetectKeypoint(int numoctaves, ImageOctaves *GaussianPyr);
+	void DetectKeypoint(int numoctaves, ImageOctaves *GaussianPyr);
 	void DisplayKeypointLocation(CImg<float>& image, ImageOctaves *GaussianPyr);
 
 	//SIFT算法第四步：计算高斯图像的梯度方向和幅值，计算各个特征点的主方向  
@@ -138,8 +139,7 @@ public:
 
 	/* 以下为在源代码基础上添加部分 */
 	void SiftMainProcess();
-	int getKeyPointsCount();            //获取keypoint总数
-	Keypoint getFirstKeyDescriptors();  //获取第一个keyDescriptor结点 
+	vector<Keypoint> getFirstKeyDescriptors();  //获取第一个keyDescriptor结点
 
 	void saveImgWithKeypoint(char* filename);
     float ImLevelsDog(int i, int j, int row, int col);
@@ -167,8 +167,8 @@ private:
 	int keypoint_count = 0;
 
 	//定义特征点具体变量  
-	Keypoint keypoints;      //用于临时存储特征点的位置等  
-	Keypoint keyDescriptors; //用于最后的确定特征点以及特征描述字
+	vector<Keypoint> keypoints;      //用于临时存储特征点的位置等
+	vector<Keypoint> keyDescriptors; //用于最后的确定特征点以及特征描述字
 
 	const unsigned char color[3] = {255, 0, 0};
 	//声明当前帧IplImage指针  
