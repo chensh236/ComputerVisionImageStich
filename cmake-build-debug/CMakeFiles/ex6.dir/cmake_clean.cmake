@@ -1,18 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ex6.dir/ImageStitching/main.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/main.cpp.o"
+  "CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.o"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.o"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.o"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/host.c.o"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/random.c.o"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.o"
+  "CMakeFiles/ex6.dir/ImageStitching/ImageProcess.cpp.o"
   "ex6.pdb"
-  "ex6.exe"
-  "ex6.exe.manifest"
-  "libex6.dll.a"
+  "ex6"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -8,143 +8,131 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
+				<Option working_dir="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ex6">
-				<Option output="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/ex6.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching"/>
-					<Add directory="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/."/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex6"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ex6/fast">
-				<Option output="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/ex6.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching"/>
-					<Add directory="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/."/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex6/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
+				<Option working_dir="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ex6">
+				<Option output="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/ex6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching"/>
+					<Add directory="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex6"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ex6/fast">
+				<Option output="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/ex6" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching"/>
+					<Add directory="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex6/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/CImg.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/CImg.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyBlending.cpp">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/ImageProcess.cpp">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyBlending.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/ImageProcess.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyMatching.cpp">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.cpp">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MyMatching.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.cpp">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/main.cpp">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.cpp">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/main.cpp">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.c">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.c">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.c">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.h">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.c">
-			<Option target="ex6"/>
-		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.h">
-			<Option target="ex6"/>
-		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.c">
-			<Option target="ex6"/>
-		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.h">
-			<Option target="ex6"/>
-		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/CMakeLists.txt">
+		<Unit filename="/Users/chensihang/Desktop/cv/ComputerVisionImageStich/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

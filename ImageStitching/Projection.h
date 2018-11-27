@@ -2,6 +2,8 @@
 // Created by Chen Sihang on 2018/11/26.
 //
 
+
+// 这个类进行投影，将原图像投影到柱面坐标上
 #ifndef PROJECTION_H
 #define PROJECTION_H
 #include "CImg.h"
@@ -28,6 +30,11 @@ public:
     // 将图像投影到柱面坐标上
     static CImg<unsigned char> imageProjection(const CImg<unsigned char> &);
 private:
+    // 进行双线性插值计算
+    // cimg : 输入图像
+    // float : x
+    // float : y
+    // int : channel
     static unsigned char bilinearInterpolation(const CImg<unsigned char>&, float, float, int);
 };
 

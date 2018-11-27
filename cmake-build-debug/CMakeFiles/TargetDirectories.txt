@@ -1,3 +1,3 @@
-C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir
-C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/chensihang/Desktop/cv/ComputerVisionImageStich/cmake-build-debug/CMakeFiles/ex6.dir
