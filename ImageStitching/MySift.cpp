@@ -842,7 +842,7 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 			// printf("%f  ",feat_desc[i]);    
 		}
 		//printf("/n");  
-		for (int i = 0; i < 512; ++i, ++i) {
+		for (int i = 0; i < 16; ++i, ++i) {
 			float x_sample = feat[i];
 			float y_sample = feat[i + 1];
 
@@ -1148,7 +1148,7 @@ void MySift::SiftMainProcess() {
 		CloseHandle(h[i]);
 	}
 	float current = clock();
-	cout<<"time"<<((current - now) / 60)<<endl;
+	cout<<"time"<<((current - now) /1000)<<endl;
 }
 
 vector<Keypoint> MySift::getFirstKeyDescriptors() {
