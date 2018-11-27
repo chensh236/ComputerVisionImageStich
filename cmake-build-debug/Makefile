@@ -203,6 +203,33 @@ ImageStitching/MySift.cpp.s:
 	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.s
 .PHONY : ImageStitching/MySift.cpp.s
 
+ImageStitching/Projection.obj: ImageStitching/Projection.cpp.obj
+
+.PHONY : ImageStitching/Projection.obj
+
+# target to build an object file
+ImageStitching/Projection.cpp.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj
+.PHONY : ImageStitching/Projection.cpp.obj
+
+ImageStitching/Projection.i: ImageStitching/Projection.cpp.i
+
+.PHONY : ImageStitching/Projection.i
+
+# target to preprocess a source file
+ImageStitching/Projection.cpp.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.i
+.PHONY : ImageStitching/Projection.cpp.i
+
+ImageStitching/Projection.s: ImageStitching/Projection.cpp.s
+
+.PHONY : ImageStitching/Projection.s
+
+# target to generate assembly for a file
+ImageStitching/Projection.cpp.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.s
+.PHONY : ImageStitching/Projection.cpp.s
+
 ImageStitching/main.obj: ImageStitching/main.cpp.obj
 
 .PHONY : ImageStitching/main.obj
@@ -230,32 +257,140 @@ ImageStitching/main.cpp.s:
 	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/main.cpp.s
 .PHONY : ImageStitching/main.cpp.s
 
-ImageStitching/stdafx.obj: ImageStitching/stdafx.cpp.obj
+ImageStitching/vl/generic.obj: ImageStitching/vl/generic.c.obj
 
-.PHONY : ImageStitching/stdafx.obj
+.PHONY : ImageStitching/vl/generic.obj
 
 # target to build an object file
-ImageStitching/stdafx.cpp.obj:
-	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj
-.PHONY : ImageStitching/stdafx.cpp.obj
+ImageStitching/vl/generic.c.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj
+.PHONY : ImageStitching/vl/generic.c.obj
 
-ImageStitching/stdafx.i: ImageStitching/stdafx.cpp.i
+ImageStitching/vl/generic.i: ImageStitching/vl/generic.c.i
 
-.PHONY : ImageStitching/stdafx.i
+.PHONY : ImageStitching/vl/generic.i
 
 # target to preprocess a source file
-ImageStitching/stdafx.cpp.i:
-	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.i
-.PHONY : ImageStitching/stdafx.cpp.i
+ImageStitching/vl/generic.c.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.i
+.PHONY : ImageStitching/vl/generic.c.i
 
-ImageStitching/stdafx.s: ImageStitching/stdafx.cpp.s
+ImageStitching/vl/generic.s: ImageStitching/vl/generic.c.s
 
-.PHONY : ImageStitching/stdafx.s
+.PHONY : ImageStitching/vl/generic.s
 
 # target to generate assembly for a file
-ImageStitching/stdafx.cpp.s:
-	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.s
-.PHONY : ImageStitching/stdafx.cpp.s
+ImageStitching/vl/generic.c.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.s
+.PHONY : ImageStitching/vl/generic.c.s
+
+ImageStitching/vl/host.obj: ImageStitching/vl/host.c.obj
+
+.PHONY : ImageStitching/vl/host.obj
+
+# target to build an object file
+ImageStitching/vl/host.c.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj
+.PHONY : ImageStitching/vl/host.c.obj
+
+ImageStitching/vl/host.i: ImageStitching/vl/host.c.i
+
+.PHONY : ImageStitching/vl/host.i
+
+# target to preprocess a source file
+ImageStitching/vl/host.c.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/host.c.i
+.PHONY : ImageStitching/vl/host.c.i
+
+ImageStitching/vl/host.s: ImageStitching/vl/host.c.s
+
+.PHONY : ImageStitching/vl/host.s
+
+# target to generate assembly for a file
+ImageStitching/vl/host.c.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/host.c.s
+.PHONY : ImageStitching/vl/host.c.s
+
+ImageStitching/vl/imopv.obj: ImageStitching/vl/imopv.c.obj
+
+.PHONY : ImageStitching/vl/imopv.obj
+
+# target to build an object file
+ImageStitching/vl/imopv.c.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj
+.PHONY : ImageStitching/vl/imopv.c.obj
+
+ImageStitching/vl/imopv.i: ImageStitching/vl/imopv.c.i
+
+.PHONY : ImageStitching/vl/imopv.i
+
+# target to preprocess a source file
+ImageStitching/vl/imopv.c.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.i
+.PHONY : ImageStitching/vl/imopv.c.i
+
+ImageStitching/vl/imopv.s: ImageStitching/vl/imopv.c.s
+
+.PHONY : ImageStitching/vl/imopv.s
+
+# target to generate assembly for a file
+ImageStitching/vl/imopv.c.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.s
+.PHONY : ImageStitching/vl/imopv.c.s
+
+ImageStitching/vl/random.obj: ImageStitching/vl/random.c.obj
+
+.PHONY : ImageStitching/vl/random.obj
+
+# target to build an object file
+ImageStitching/vl/random.c.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj
+.PHONY : ImageStitching/vl/random.c.obj
+
+ImageStitching/vl/random.i: ImageStitching/vl/random.c.i
+
+.PHONY : ImageStitching/vl/random.i
+
+# target to preprocess a source file
+ImageStitching/vl/random.c.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/random.c.i
+.PHONY : ImageStitching/vl/random.c.i
+
+ImageStitching/vl/random.s: ImageStitching/vl/random.c.s
+
+.PHONY : ImageStitching/vl/random.s
+
+# target to generate assembly for a file
+ImageStitching/vl/random.c.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/random.c.s
+.PHONY : ImageStitching/vl/random.c.s
+
+ImageStitching/vl/sift.obj: ImageStitching/vl/sift.c.obj
+
+.PHONY : ImageStitching/vl/sift.obj
+
+# target to build an object file
+ImageStitching/vl/sift.c.obj:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj
+.PHONY : ImageStitching/vl/sift.c.obj
+
+ImageStitching/vl/sift.i: ImageStitching/vl/sift.c.i
+
+.PHONY : ImageStitching/vl/sift.i
+
+# target to preprocess a source file
+ImageStitching/vl/sift.c.i:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.i
+.PHONY : ImageStitching/vl/sift.c.i
+
+ImageStitching/vl/sift.s: ImageStitching/vl/sift.c.s
+
+.PHONY : ImageStitching/vl/sift.s
+
+# target to generate assembly for a file
+ImageStitching/vl/sift.c.s:
+	$(MAKE) -f CMakeFiles\ex6.dir\build.make CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.s
+.PHONY : ImageStitching/vl/sift.c.s
 
 # Help Target
 help:
@@ -275,12 +410,27 @@ help:
 	@echo ... ImageStitching/MySift.obj
 	@echo ... ImageStitching/MySift.i
 	@echo ... ImageStitching/MySift.s
+	@echo ... ImageStitching/Projection.obj
+	@echo ... ImageStitching/Projection.i
+	@echo ... ImageStitching/Projection.s
 	@echo ... ImageStitching/main.obj
 	@echo ... ImageStitching/main.i
 	@echo ... ImageStitching/main.s
-	@echo ... ImageStitching/stdafx.obj
-	@echo ... ImageStitching/stdafx.i
-	@echo ... ImageStitching/stdafx.s
+	@echo ... ImageStitching/vl/generic.obj
+	@echo ... ImageStitching/vl/generic.i
+	@echo ... ImageStitching/vl/generic.s
+	@echo ... ImageStitching/vl/host.obj
+	@echo ... ImageStitching/vl/host.i
+	@echo ... ImageStitching/vl/host.s
+	@echo ... ImageStitching/vl/imopv.obj
+	@echo ... ImageStitching/vl/imopv.i
+	@echo ... ImageStitching/vl/imopv.s
+	@echo ... ImageStitching/vl/random.obj
+	@echo ... ImageStitching/vl/random.i
+	@echo ... ImageStitching/vl/random.s
+	@echo ... ImageStitching/vl/sift.obj
+	@echo ... ImageStitching/vl/sift.i
+	@echo ... ImageStitching/vl/sift.s
 .PHONY : help
 
 

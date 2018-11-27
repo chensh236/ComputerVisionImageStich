@@ -112,19 +112,89 @@ CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\MySift.cpp" -o CMakeFiles\ex6.dir\ImageStitching\MySift.cpp.s
 
-CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj: CMakeFiles/ex6.dir/flags.make
-CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj: CMakeFiles/ex6.dir/includes_CXX.rsp
-CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj: ../ImageStitching/stdafx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\stdafx.cpp.obj -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\stdafx.cpp"
+CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj: CMakeFiles/ex6.dir/includes_CXX.rsp
+CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj: ../ImageStitching/Projection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\Projection.cpp.obj -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\Projection.cpp"
 
-CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\stdafx.cpp" > CMakeFiles\ex6.dir\ImageStitching\stdafx.cpp.i
+CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\Projection.cpp" > CMakeFiles\ex6.dir\ImageStitching\Projection.cpp.i
 
-CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\stdafx.cpp" -o CMakeFiles\ex6.dir\ImageStitching\stdafx.cpp.s
+CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\Projection.cpp" -o CMakeFiles\ex6.dir\ImageStitching\Projection.cpp.s
+
+CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj: CMakeFiles/ex6.dir/includes_C.rsp
+CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj: ../ImageStitching/vl/sift.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\vl\sift.c.obj   -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\sift.c"
+
+CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\sift.c" > CMakeFiles\ex6.dir\ImageStitching\vl\sift.c.i
+
+CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\sift.c" -o CMakeFiles\ex6.dir\ImageStitching\vl\sift.c.s
+
+CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj: CMakeFiles/ex6.dir/includes_C.rsp
+CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj: ../ImageStitching/vl/generic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\vl\generic.c.obj   -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\generic.c"
+
+CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\generic.c" > CMakeFiles\ex6.dir\ImageStitching\vl\generic.c.i
+
+CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\generic.c" -o CMakeFiles\ex6.dir\ImageStitching\vl\generic.c.s
+
+CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj: CMakeFiles/ex6.dir/includes_C.rsp
+CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj: ../ImageStitching/vl/host.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\vl\host.c.obj   -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\host.c"
+
+CMakeFiles/ex6.dir/ImageStitching/vl/host.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex6.dir/ImageStitching/vl/host.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\host.c" > CMakeFiles\ex6.dir\ImageStitching\vl\host.c.i
+
+CMakeFiles/ex6.dir/ImageStitching/vl/host.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex6.dir/ImageStitching/vl/host.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\host.c" -o CMakeFiles\ex6.dir\ImageStitching\vl\host.c.s
+
+CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj: CMakeFiles/ex6.dir/includes_C.rsp
+CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj: ../ImageStitching/vl/random.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\vl\random.c.obj   -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\random.c"
+
+CMakeFiles/ex6.dir/ImageStitching/vl/random.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex6.dir/ImageStitching/vl/random.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\random.c" > CMakeFiles\ex6.dir\ImageStitching\vl\random.c.i
+
+CMakeFiles/ex6.dir/ImageStitching/vl/random.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex6.dir/ImageStitching/vl/random.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\random.c" -o CMakeFiles\ex6.dir\ImageStitching\vl\random.c.s
+
+CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj: CMakeFiles/ex6.dir/flags.make
+CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj: CMakeFiles/ex6.dir/includes_C.rsp
+CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj: ../ImageStitching/vl/imopv.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ex6.dir\ImageStitching\vl\imopv.c.obj   -c "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\imopv.c"
+
+CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\imopv.c" > CMakeFiles\ex6.dir\ImageStitching\vl\imopv.c.i
+
+CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\ImageStitching\vl\imopv.c" -o CMakeFiles\ex6.dir\ImageStitching\vl\imopv.c.s
 
 # Object files for target ex6
 ex6_OBJECTS = \
@@ -132,7 +202,12 @@ ex6_OBJECTS = \
 "CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj" \
 "CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj" \
 "CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj" \
-"CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj"
+"CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj" \
+"CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj" \
+"CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj" \
+"CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj" \
+"CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj" \
+"CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj"
 
 # External object files for target ex6
 ex6_EXTERNAL_OBJECTS =
@@ -141,12 +216,17 @@ ex6.exe: CMakeFiles/ex6.dir/ImageStitching/main.cpp.obj
 ex6.exe: CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj
 ex6.exe: CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj
 ex6.exe: CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj
-ex6.exe: CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj
+ex6.exe: CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj
 ex6.exe: CMakeFiles/ex6.dir/build.make
 ex6.exe: CMakeFiles/ex6.dir/linklibs.rsp
 ex6.exe: CMakeFiles/ex6.dir/objects1.rsp
 ex6.exe: CMakeFiles/ex6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ex6.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Chen Sihang\Desktop\cv\ComputerVisionImageStich\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ex6.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ex6.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

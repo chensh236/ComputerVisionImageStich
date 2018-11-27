@@ -54,8 +54,8 @@ void MyMatching::featureMatchMainProcess() {
 	cout << ">>> matchedPairSet.size: " << matchedPairSet.size() << endl;
 }
 
-void MyMatching::drawOriKeypointOnImg(char* _filenameA, char* _filenameB, char* _saveAddrA, char* _saveAddrB) {
-	srcImgA.load_bmp(_filenameA);
+void MyMatching::drawOriKeypointOnImg(CImg<float>& img1, CImg<float>& img2, char* _saveAddrA, char* _saveAddrB) {
+	srcImgA = CImg<int>(img1);
 	srcImgWithKpA = CImg<int>(srcImgA._width, srcImgA._height, 1, 3, 0);
 	cimg_forXY(srcImgWithKpA, x, y) {
 		srcImgWithKpA(x, y, 0, 0) = srcImgA(x, y, 0, 0);
@@ -63,7 +63,7 @@ void MyMatching::drawOriKeypointOnImg(char* _filenameA, char* _filenameB, char* 
 		srcImgWithKpA(x, y, 0, 2) = srcImgA(x, y, 0, 2);
 	}
 
-	srcImgB.load_bmp(_filenameB);
+	srcImgB = CImg<int>(img2);
 	srcImgWithKpB = CImg<int>(srcImgB._width, srcImgB._height, 1, 3, 0);
 	cimg_forXY(srcImgWithKpB, x, y) {
 		srcImgWithKpB(x, y, 0, 0) = srcImgB(x, y, 0, 0);

@@ -1,5 +1,7 @@
 #include "MySift.h"
 #include <float.h>
+#include  <sys/types.h>
+#include <time.h>
 
 MySift::MySift() {
 	keyDescriptors.clear();
@@ -9,7 +11,8 @@ MySift::MySift() {
 MySift::~MySift() {
 }
 
-MySift::MySift(char* _filename, int _isColor) {
+MySift::MySift(const char* _filename, int _isColor, CImg<float>& inputImg) {
+    src = inputImg;
 	filename = _filename;
 	isColor = _isColor;
 }
@@ -765,11 +768,11 @@ void MySift::DisplayOrientation(CImg<float> image, ImageOctaves *GaussianPyr)
         image.draw_line((int)xx0, (int)yy0, (int)x, (int)y, color);
         image.draw_line((int)xx1, (int)yy1, (int)x, (int)y, color);
 	}
-    image.display();
+    //image.display();
 }
 
 //SIFT算法第五步：抽取各个特征点处的特征描述字
-void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr) {
+void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr, int index, vector<Keypoint>& keyDescriptors) {
 	// The orientation histograms have 8 bins
 	// 8个方向的角度值
 	float orient_bin_spacing = PI / 4;
@@ -777,7 +780,7 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 		0.0, orient_bin_spacing, PI*0.5,  (float)PI + orient_bin_spacing };
 	//产生描述字中心各点坐标
 	//
-	float *feat_grid = (float *)malloc(2 * 16 * sizeof(float));
+	float feat_grid[32];
 	/*-6, -2   -------- 6,6
 	 *
 	 *
@@ -794,29 +797,24 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 	 * */
 
 	//产生网格  16个大网格，里面共有16个小网格
-	float *feat_samples = (float *)malloc(2 * 256 * sizeof(float));
+	float feat_samples[512];
 	for (int i = 0; i < 4 * GridSpacing; i++) {
 		for (int j = 0; j < 8 * GridSpacing; j += 2) {
 			feat_samples[i * 8 * GridSpacing + j] = -(2 * GridSpacing - 0.5) + i;
 			feat_samples[i * 8 * GridSpacing + j + 1] = -(2 * GridSpacing - 0.5) + 0.5*j;
 		}
 	}
-	for (int i = 0; i < 4 * GridSpacing; i++) {
-		for (int j = 0; j < 8 * GridSpacing; j += 2) {
-		}
-	}
 
 
 	float feat_window = 2 * GridSpacing;
-	cout<<"descripsize:"<<keyDescriptors.size()<<endl;
-	for(Keypoint p : keyDescriptors)
+	Keypoint p = keyDescriptors[index];
 	{
 		//float scale = (GaussianPyr[p.octave].Octave)[p.level].absolute_sigma;
 		float sine = sin(p.ori);
 		float cosine = cos(p.ori);
 
 		//计算中心点坐标旋转之后的位置  
-		float *featcenter = (float *)malloc(2 * 16 * sizeof(float));
+		float featcenter[32];
 		for (int i = 0; i < GridSpacing; i++) {
 			for (int j = 0; j < 2 * GridSpacing; j += 2) {
 				float x = feat_grid[i * 2 * GridSpacing + j];
@@ -827,8 +825,8 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 		}
 
 		// 網格中心點旋轉後的位置
-		// calculate sample window coordinates (rotated along keypoint)  
-		float *feat = (float *)malloc(2 * 256 * sizeof(float));
+		// calculate sample window coordinates (rotated along keypoint)
+		float feat[512];
 		for (int i = 0; i < 64 * GridSpacing; i++, i++) {
 			float x = feat_samples[i];
 			float y = feat_samples[i + 1];
@@ -838,7 +836,7 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 
 		// 初始化特征描述子
 		//Initialize the feature descriptor.  
-		float *feat_desc = (float *)malloc(LEN * sizeof(float));
+		float feat_desc[128];
 		for (int i = 0; i < LEN; i++) {
 			feat_desc[i] = 0.0;
 			// printf("%f  ",feat_desc[i]);    
@@ -878,9 +876,9 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 			// 這類似 hog算子的 block 歸一化。
 			// float[128]，對每個種子點內的8方向權值是一樣的。
 			// Compute the weighting for the x and y dimensions.
-			float *x_wght = (float *)malloc(GridSpacing * GridSpacing * sizeof(float));
-			float *y_wght = (float *)malloc(GridSpacing * GridSpacing * sizeof(float));
-			float *pos_wght = (float *)malloc(8 * GridSpacing * GridSpacing * sizeof(float));
+			float x_wght[16];
+			float y_wght[16];
+			float pos_wght[16];
 			// 一共有16个点
 			for (int m = 0; m < 32; ++m, ++m) {
 				//(x,y)是16個種子點的位置
@@ -893,8 +891,6 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 			for (int m = 0; m < 16; ++m)
 				for (int n = 0; n < 8; ++n)
 					pos_wght[m * 8 + n] = x_wght[m] * y_wght[m];
-			free(x_wght);
-			free(y_wght);
 
 			//计算方向的加权，首先旋转梯度场到主方向，然后计算差异
 			float diff[8], orient_wght[LEN];
@@ -918,11 +914,7 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 				orient_wght[m] = max((1.0 - 1.0*fabs(diff[m % 8]) / orient_bin_spacing), 0);
 				feat_desc[m] = feat_desc[m] + orient_wght[m] * pos_wght[m] * g*mag_sample;
 			}
-			free(pos_wght);
 		}
-		cout<<"get features"<<endl;
-		free(feat);
-		free(featcenter);
 		//歸一化、抑制、再歸一化
 		float norm = GetVectorNorm(feat_desc, LEN);
 		for (int m = 0; m < LEN; m++) {
@@ -938,9 +930,8 @@ void MySift::ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr
 		//printf("\n");
 		p.descrip = feat_desc;
 	}
-	free(feat_grid);
-	free(feat_samples);
-	cout<<"return"<<endl;
+
+	cout<<"return"<<index<<endl;
 }
 
 //为了显示图象金字塔，而作的图像水平拼接  
@@ -1014,15 +1005,6 @@ void MySift::cvAddS(CImg<float> img, float input, CImg<float> &dst){
 }
 
 void MySift::SiftMainProcess() {
-	//读取图片
-	CImg<float> tmp(filename);
-	src = CImg<float>(tmp.width(), tmp.height(), 1, 3, 0);
-	cimg_forXY(src, x, y)
-	{
-		src(x, y, 0) = (float) tmp(x, y, 0);
-		src(x, y, 1) = (float) tmp(x, y, 1);
-		src(x, y, 2) = (float) tmp(x, y, 2);
-	}
 
 	// //为图像分配内存   
 	// image_kp = cvCreateImage(cvSize(src.width, src.height), IPL_DEPTH_8U, 3);
@@ -1083,7 +1065,7 @@ void MySift::SiftMainProcess() {
 	mosaic1 = CImg<float>(mosaicVertical1.width(), mosaicVertical1.height(), 1, 1, 0);
 	cvConvertScale(mosaicVertical1, mosaicVertical1, 255.0, 0);
 	cvConvertScaleAbs(mosaicVertical1, mosaic1, 1, 0);
-	mosaic1.display();
+	//mosaic1.display();
 
 
 	//显示DOG金字塔  
@@ -1121,14 +1103,14 @@ void MySift::SiftMainProcess() {
 	mosaic2 = CImg<float>(mosaicVertical1.width(), mosaicVertical1.height(), 1, 1, 0);
 	cvConvertScale(mosaicVertical1, mosaicVertical1, 255.0 / (max_val - min_val), 0);
 	cvConvertScaleAbs(mosaicVertical1, mosaic2, 1, 0);
-	mosaic2.display();
+	//mosaic2.display();
 
 	//SIFT算法第三步：特征点位置检测，最后确定特征点的位置  
 	DetectKeypoint(numoctaves, Gaussianpyr);
 	printf("the keypoints number are %d ;\n", keypoints.size());
 	image_kp = src;
 	DisplayKeypointLocation(image_kp, Gaussianpyr);
-	image_kp.display();
+	//image_kp.display();
 
 	//SIFT算法第四步：计算高斯图像的梯度方向和幅值，计算各个特征点的主方向  
 	ComputeGrad_DirecandMag(numoctaves, Gaussianpyr);
@@ -1137,14 +1119,51 @@ void MySift::SiftMainProcess() {
 	// cvCopy(src, image_featDir, NULL);
 	DisplayOrientation(image_featDir, Gaussianpyr);
 
-	//SIFT算法第五步：抽取各个特征点处的特征描述字  
-	ExtractFeatureDescriptors(numoctaves, Gaussianpyr);
+	//SIFT算法第五步：抽取各个特征点处的特征描述字
+	int MAX_FRAME = 16;
+	HANDLE h[MAX_FRAME]; //线程句柄
+	PT pT[MAX_FRAME];
+	int parameter[MAX_FRAME][25]; // 参数
+	// 每一个线程的组数
+	float now = clock();
+	int groupSize = floor(keypoints.size() / MAX_FRAME) + 1;
+	for(int i = 0; i < MAX_FRAME; ++i){
+		int count = 0;
+		for(int j = 0; j < groupSize; j ++){
+			if(i * groupSize + j >= keypoints.size()) continue;
+			parameter[i][j] = i * groupSize + j;
+			//cout<<parameter[j]<<" ";
+			count++;
+		}
+		//cout<<endl;
+		pT[i].parameter = parameter[i];
+		pT[i].count = count;
+		pT[i].Gus = Gaussianpyr;
+		pT[i].keyDescriptors = &keyDescriptors;
+		h[i] = CreateThread(NULL,0,(LPTHREAD_START_ROUTINE)ThreadUser, &pT[i],1,0); //创建子线程
+	}
+	cout<<"Begin to Create:"<<endl;
+	WaitForMultipleObjects(MAX_FRAME, h, TRUE, INFINITE);
+	for (int i = 0; i < MAX_FRAME; i++){
+		CloseHandle(h[i]);
+	}
+	float current = clock();
+	cout<<"time"<<((current - now) / 60)<<endl;
 }
 
 vector<Keypoint> MySift::getFirstKeyDescriptors() {
 	return keyDescriptors;
 }
 
-void MySift::saveImgWithKeypoint(char* filename){
+void MySift::saveImgWithKeypoint(const char* filename){
     image_kp.save(filename);
+}
+
+void MySift::ThreadUser(PT *parameter) { //线程入口
+
+	for(int i = 0; i < parameter->count; ++i){
+		int tmp = parameter->parameter[i];
+		//cout<<tmp<<endl;
+		ExtractFeatureDescriptors(0, parameter->Gus, tmp, *(parameter->keyDescriptors));
+	}
 }

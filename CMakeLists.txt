@@ -17,9 +17,7 @@ if (APPLE)
             ImageStitching/MyMatching.h
             ImageStitching/MySift.cpp
             ImageStitching/MySift.h
-            ImageStitching/stdafx.cpp
-            ImageStitching/stdafx.h
-            ImageStitching/targetver.h)
+            )
 endif (APPLE)
 
 if(UNIX AND NOT APPLE)
@@ -34,9 +32,7 @@ if(UNIX AND NOT APPLE)
             ImageStitching/MyMatching.h
             ImageStitching/MySift.cpp
             ImageStitching/MySift.h
-            ImageStitching/stdafx.cpp
-            ImageStitching/stdafx.h
-            ImageStitching/targetver.h)
+            )
     set (CMAKE_CXX_FLAGS "-lX11 -pthread")
     message(STATUS "Looking for X11...")
     find_package(X11 REQUIRED)
@@ -45,8 +41,9 @@ if(UNIX AND NOT APPLE)
 endif(UNIX AND NOT APPLE)
 
 if (WIN32)
-    set (CMAKE_CXX_FLAGS "-lgdi32")
-    set (CMAKE_SHARED_LINKER_FLAGS "-lgdi32")
+    set (CMAKE_CXX_FLAGS "-lgdi32 -static-libstdc++ -static-libgcc")
+    set (CMAKE_SHARED_LINKER_FLAGS "-lgdi32 -static-libstdc++ -static-libgcc")
+
     include_directories(ImageStitching)
 
     add_executable(ex6
@@ -58,9 +55,19 @@ if (WIN32)
             ImageStitching/MyMatching.h
             ImageStitching/MySift.cpp
             ImageStitching/MySift.h
-            ImageStitching/stdafx.cpp
-            ImageStitching/stdafx.h
-            ImageStitching/targetver.h)
+            ImageStitching/Projection.cpp
+            ImageStitching/Projection.h
+            ImageStitching/vl/sift.h
+            ImageStitching/vl/sift.c
+            ImageStitching/vl/generic.h
+            ImageStitching/vl/generic.c
+            ImageStitching/vl/host.h
+            ImageStitching/vl/host.c
+            ImageStitching/vl/random.h
+            ImageStitching/vl/random.c
+            ImageStitching/vl/imopv.h
+            ImageStitching/vl/imopv.c
+            )
 endif(WIN32)
 
 include_directories(.)

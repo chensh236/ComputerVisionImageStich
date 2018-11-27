@@ -3,7 +3,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/ex6.dir/ImageStitching/MyBlending.cpp.obj"
   "CMakeFiles/ex6.dir/ImageStitching/MyMatching.cpp.obj"
   "CMakeFiles/ex6.dir/ImageStitching/MySift.cpp.obj"
-  "CMakeFiles/ex6.dir/ImageStitching/stdafx.cpp.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/Projection.cpp.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/sift.c.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/generic.c.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/host.c.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/random.c.obj"
+  "CMakeFiles/ex6.dir/ImageStitching/vl/imopv.c.obj"
   "ex6.pdb"
   "ex6.exe"
   "ex6.exe.manifest"
@@ -11,6 +16,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang C CXX)
   include(CMakeFiles/ex6.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

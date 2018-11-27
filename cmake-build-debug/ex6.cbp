@@ -105,16 +105,43 @@
 		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.h">
 			<Option target="ex6"/>
 		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.cpp">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/Projection.h">
+			<Option target="ex6"/>
+		</Unit>
 		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/main.cpp">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/stdafx.cpp">
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.c">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/stdafx.h">
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/generic.h">
 			<Option target="ex6"/>
 		</Unit>
-		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/targetver.h">
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.c">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/host.h">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.c">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/imopv.h">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.c">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/random.h">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.c">
+			<Option target="ex6"/>
+		</Unit>
+		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/vl/sift.h">
 			<Option target="ex6"/>
 		</Unit>
 		<Unit filename="C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/CMakeLists.txt">

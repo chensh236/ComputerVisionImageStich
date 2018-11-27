@@ -1,4 +1,5 @@
-#program once
+#ifndef MYSHIFT_H
+#define MYSHIFT_H
 #include <cstdio>
 #include <stdlib.h>
 #include <cstring>
@@ -60,7 +61,18 @@ typedef struct KeypointSt {
 
 	float scale, ori, mag;    /* 所在层的尺度sigma,主方向orientation (range [-PI,PI])，以及幅值 */
 	float *descrip;           /* 特征描述字指针：128维或32维等 */
+	int ix, iy; // 用于柱坐标图形的变换
 } Keypoint;
+
+
+typedef struct PT{
+    PT(){}
+    int* parameter;
+    int count;
+    vector<Keypoint>* keyDescriptors;
+    ImageOctaves* Gus;
+} PT;
+
 
 class MySift {
 
@@ -68,11 +80,11 @@ public:
 	MySift();
 	~MySift();
 
-	MySift(char* _filename, int _isColor);
-
+	MySift(const char* _filename, int _isColor, CImg<float>& inputImg);
+    static void ThreadUser(PT *);
 	CImg<float> halfSizeImage(CImg<float> im);     //缩小图像：下采样
 	CImg<float> doubleSizeImage2(CImg<float> im);  //扩大图像：线性插值  
-	float getPixelBI(CImg<float> im, float col, float row);//双线性插值函数  
+	static float getPixelBI(CImg<float> im, float col, float row);//双线性插值函数
 	void normalizeVec(float* vec, int dim);//向量归一化    
 	CImg<float> GaussianKernel2D(float sigma);  //得到2维高斯核
 
@@ -107,7 +119,7 @@ public:
 	void DisplayOrientation(CImg<float> image, ImageOctaves *GaussianPyr);
 
 	//SIFT算法第五步：抽取各个特征点处的特征描述字  
-	void ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr);
+	static void ExtractFeatureDescriptors(int numoctaves, ImageOctaves *GaussianPyr, int index, vector<Keypoint>& keyDescriptors);
 
 	//为了显示图象金字塔，而作的图像水平、垂直拼接  
 	CImg<float> MosaicHorizen(CImg<float> im1, CImg<float> im2);
@@ -117,7 +129,7 @@ public:
 	void SiftMainProcess();
 	vector<Keypoint> getFirstKeyDescriptors();  //获取第一个keyDescriptor结点
 
-	void saveImgWithKeypoint(char* filename);
+	void saveImgWithKeypoint(const char* filename);
     float ImLevelsDog(int i, int j, int row, int col);
     float ImLevelsGussian(int i, int j, int row, int col);
     CImg<float> toGrayScale(CImg<float> img);
@@ -128,7 +140,7 @@ public:
 	void cvSub(CImg<float> im1, CImg<float> im2, CImg<float> &dst);
 
 private:
-	char* filename;
+	const char* filename;
 	int isColor;
 
 	int numoctaves;
@@ -164,3 +176,5 @@ private:
 
 	ImageOctaves Gaussianpyr[4];
 };
+
+#endif

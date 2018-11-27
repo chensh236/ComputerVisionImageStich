@@ -238,9 +238,9 @@ vl_sift_new (int width, int height,
   f-> s_min   = -1 ;
   f-> s_max   = nlevels + 1 ;
   f-> o_cur   = o_min ;
-  cout << "fuck2" << endl;
+  //cout << "fuck2" << endl;
   f-> temp    = (vl_sift_pix*) vl_malloc (sizeof(vl_sift_pix) * nel    ) ;
-  cout << "fuck2" << endl;
+  //cout << "fuck2" << endl;
   f-> octave  = (vl_sift_pix*) vl_malloc (sizeof(vl_sift_pix) * nel
                         * (f->s_max - f->s_min + 1)  ) ;
   f-> dog     = (vl_sift_pix*) vl_malloc (sizeof(vl_sift_pix) * nel

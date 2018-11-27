@@ -123,14 +123,18 @@ MySift.h
 C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.h
 float.h
 -
+sys/types.h
+-
+time.h
+-
 
 C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/MySift.h
-stdio.h
+cstdio
 -
 stdlib.h
-C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/stdlib.h
-string.h
-C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/string.h
+-
+cstring
+-
 malloc.h
 C:/Users/Chen Sihang/Desktop/cv/ComputerVisionImageStich/ImageStitching/malloc.h
 math.h

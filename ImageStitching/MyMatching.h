@@ -34,7 +34,7 @@ public:
 	void featureMatchMainProcess();
 
 	/* 在原图上画出当前得到的匹配点（不全是真正的匹配点） */
-	void drawOriKeypointOnImg(char* _filenameA, char* _filenameB, char* _saveAddrA, char* _saveAddrB);
+	void drawOriKeypointOnImg(CImg<float>&, CImg<float>&, char* _saveAddrA, char* _saveAddrB);
 	
 	/* 将两张图片拼在同一张图片上，同时画出匹配点之间连线 */
 	void mixImageAndDrawPairLine(char* mixImgAddr, char* mixImgWithLineAddr);
